@@ -19,7 +19,7 @@ for (var i = 0; i < img.length; i++) {
 function load_img(){
   loadImg++;
   if (loadImg == img.length){
-    setTimeout(hidePreloader,2000)
+    setTimeout(hidePreloader,1000)
   }
 }
 
