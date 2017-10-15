@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ux interface by Postnov</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/script.js"></script>
+</head>
+<body>
+
+<div class="thanks">
+  <h2 class="thanks__text">Вы успешно вошли или зарегистрировались на сайте!<br>Спасибо за использование данной формы!<br>К сожалению пока работает только она ;)</h2>
+  <button class="thanks__button">Вернуться</button>
+</div>
+
+
+
+<section class="login-page">
+
+  <div class="login">
+
+    <header class="login__header">
+      <img src="img/logo.png" alt="" class="logo">
+      <menu class="login__links">
+        <span data-tab="tab__sign-up" class="tab">Register</span>
+        <span data-tab="tab__sign-in" class="tab active">Login</span>
+      </menu>
+    </header>
+
+    <div class="login__content">
+
+
+      <section class="login__sign-in tab-container" id="tab__sign-in">
+        <span class="login__title">Welcome <span>back!</span></span>
+
+        <form action="" class="login__form form">
+          <label for="" class="form__label label label--name">
+            <label class="label__placeholder">Username</label>
+            <input type="text" class="form__input">
+          </label>
+
+          <label for="" class="form__label label label--pass">
+            <label class="label__placeholder">Password</label>
+            <input type="password" class="form__input">
+          </label>
+
+          <button type="button" class="form__button">Enter</button>
+         </form>
+      </section>
+
+      <section class="login__sign-up tab-container" id="tab__sign-up">
+        <span class="login__title">Resiter <span>please!</span></span>
+
+        <form action="" class="login__form form">
+          <label for="" class="form__label label label--name">
+            <label class="label__placeholder">Username</label>
+            <input type="text" class="form__input">
+          </label>
+
+          <label for="" class="form__label label label--pass">
+            <label class="label__placeholder">Password</label>
+            <input type="password" class="form__input">
+          </label>
+
+          <button type="button" class="form__button">Register</button>
+         </form>
+      </section>
+
+    </div><!-- end.login__content -->
+
+  </div><!-- end.login -->
+
+
+
+</section><!-- end.login-page -->
+
+
+</body>
+</html>
