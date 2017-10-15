@@ -38,13 +38,21 @@ function hidePreloader(){
     $('.tab').click(function(){
       var data = $(this).attr('data-tab');
 
-      $('.label').removeClass('valid invalid');
+      //show and hide content
       $('.tab-container').fadeOut(0);
-      $('.tab-container input').focusout().val('');
       $('#'+data+'').fadeIn(200);
 
+      //Switch active class
       $('.tab').removeClass('active');
       $(this).addClass('active')
+
+
+      // Unable focus input
+      $('.tab-container input').focusout().val('');
+
+      //remove all interactive animation
+      $('.label').removeClass('valid invalid');
+
     })
 
 
@@ -72,28 +80,30 @@ function hidePreloader(){
     $(this).children('input').focus();
   })
 
-  //Form image change
+
+
+  //Form image change dependens contains input
 
   $('.form__button').click(function(){
     var inputLogin = $(this).parent().find('input[type="text"]');
     var inputPass = $(this).parent().find('input[type="password"]');
 
-    //Valid login
+    //Valid username
     if (inputLogin.val().length == 0){
-      $('.label--name').removeClass('valid');
-      $('.label--name').addClass('invalid');
+      $('.label__icon--name').removeClass('valid');
+      $('.label__icon--name').addClass('invalid');
     }else {
-      $('.label--name').removeClass('invalid');
-      $('.label--name').addClass('valid');
+      $('.label__icon--name').removeClass('invalid');
+      $('.label__icon--name').addClass('valid');
     }
 
     //Valid pass
     if (inputPass.val().length == 0){
-      $('.label--pass').removeClass('valid');
-      $('.label--pass').addClass('invalid');
+      $('.label__icon--pass').removeClass('valid');
+      $('.label__icon--pass').addClass('invalid');
     }else {
-      $('.label--pass').removeClass('invalid');
-      $('.label--pass').addClass('valid');
+      $('.label__icon--pass').removeClass('invalid');
+      $('.label__icon--pass').addClass('valid');
     }
 
 

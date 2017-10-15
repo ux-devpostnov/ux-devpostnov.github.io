@@ -249,19 +249,31 @@ $loader-duration:2.0s ;
   &.active:before,
   &.active:after{width: 50%;}
 
-  &--name{
-    background: url('../img/user-icon.png') no-repeat 10px center;
-    background-size: 20px;
-    &.valid{background-image: url('../img/user-icon--valid.png');}
-    &.invalid{background-image: url('../img/user-icon--invalid.png');}
-  }
-  &--pass{
-    background: url('../img/lock-icon.png') no-repeat 10px center;
-    background-size: 20px;
-    &.valid{background-image: url('../img/lock-icon--valid.png');}
-    &.invalid{background-image: url('../img/lock-icon--invalid.png');}
-  }
+  &__icon{
+    width: 20px;
+    height: 100%;
+    position: absolute;
+    left: 7px;
+    top: 2px;
 
+    &--name{
+      background: url('../img/user-icon--sprite.png') no-repeat;
+      background-position: -20px 7px;
+      background-size: 60px;
+
+      &.valid{background-position: 0px 7px;}
+      &.invalid{background-position: -40px 7px;}
+    }
+    &--pass{
+      background: url('../img/lock-icon--sprite.png') no-repeat;
+      background-position: 0px 8px;
+      background-size: 60px;
+
+      &.valid{background-position: -41px 8px;}
+      &.invalid{background-position: -21px 8px;}
+    }
+
+  }
 
   &__placeholder{
     position: absolute;

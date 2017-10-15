@@ -286,25 +286,34 @@ body {
 .label.active:after {
   width: 50%;
 }
-.label--name {
-  background: url("../img/user-icon.png") no-repeat 10px center;
-  background-size: 20px;
+.label__icon {
+  width: 20px;
+  height: 100%;
+  position: absolute;
+  left: 7px;
+  top: 2px;
 }
-.label--name.valid {
-  background-image: url("../img/user-icon--valid.png");
+.label__icon--name {
+  background: url("../img/user-icon--sprite.png") no-repeat;
+  background-position: -20px 7px;
+  background-size: 60px;
 }
-.label--name.invalid {
-  background-image: url("../img/user-icon--invalid.png");
+.label__icon--name.valid {
+  background-position: 0 7px;
 }
-.label--pass {
-  background: url("../img/lock-icon.png") no-repeat 10px center;
-  background-size: 20px;
+.label__icon--name.invalid {
+  background-position: -40px 7px;
 }
-.label--pass.valid {
-  background-image: url("../img/lock-icon--valid.png");
+.label__icon--pass {
+  background: url("../img/lock-icon--sprite.png") no-repeat;
+  background-position: 0 8px;
+  background-size: 60px;
 }
-.label--pass.invalid {
-  background-image: url("../img/lock-icon--invalid.png");
+.label__icon--pass.valid {
+  background-position: -41px 8px;
+}
+.label__icon--pass.invalid {
+  background-position: -21px 8px;
 }
 .label__placeholder {
   position: absolute;
