@@ -119,6 +119,7 @@ $loader-duration:2.0s ;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
+  box-shadow: 0 0 50px rgba(0,0,0,.1);
 
   &__header{
     display: flex;

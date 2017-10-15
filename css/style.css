@@ -134,6 +134,8 @@ body {
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  -webkit-box-shadow: 0 0 50px rgba(0, 0, 0, .1);
+  box-shadow: 0 0 50px rgba(0, 0, 0, .1);
 }
 .login__header {
   display: -webkit-box;
