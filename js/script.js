@@ -51,7 +51,7 @@ function hidePreloader(){
       $('.tab-container input').focusout().val('');
 
       //remove all interactive animation
-      $('.label').removeClass('valid invalid');
+      $('.label__icon').removeClass('valid invalid');
 
     })
 
@@ -120,7 +120,7 @@ $('.thanks__button').click(function(){
   $('.thanks').fadeOut(700);
   $('.login-page').fadeIn(700);
 
-  $('form *').removeClass('active valid invalid')
+  $('.label__icon').removeClass('active valid invalid')
   $('input').val('');
 
 })
