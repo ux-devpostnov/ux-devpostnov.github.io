@@ -15,6 +15,67 @@ body{
   font-family: "Roboto",sans-serif;
 }
 
+/* animation preloader */
+
+.loaders{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: $dark-blue;
+}
+
+/* base */
+$loader-height: 200px !default;
+$loader-width: 200px !default;
+$loader-color:#FFF !default;
+$loader-duration:2.0s ;
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* pulse double */
+
+.ball-pulse-double {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  .loader {
+    width: $loader-height;
+    height: $loader-height;
+    position: relative;
+  }
+  .ball-1, .ball-2 {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    width: 50%;
+    height: 50%;
+    background-color: $loader-color;
+    border-radius: 50%;
+    animation: ballPulseDouble $loader-duration ease-in-out infinite;
+    opacity: .5;
+  }
+  .ball-2 {
+    animation-delay: -$loader-duration/2;
+  }
+}
+@keyframes ballPulseDouble {
+  0%, 100% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.0);
+  }
+}
+
+
 /* Helpers */
 
 

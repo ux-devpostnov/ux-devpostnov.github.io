@@ -1,4 +1,34 @@
+
+
 $(function(){
+
+
+//Placeholder
+
+var img = $('img'),
+    preloader = $('.loaders'),
+    loadImg = 0;
+
+console.log(img.length)
+
+for (var i = 0; i < img.length; i++) {
+  img_copy = new Image();
+  img_copy.src = img[i].src;
+  img_copy.onload = load_img();
+  img_copy.error = load_img();
+}
+
+function load_img(){
+  loadImg++;
+  if (loadImg == img.length){
+    setTimeout(hidePreloader,1000)
+  }
+}
+
+function hidePreloader(){
+  $('.loaders').fadeOut(1000);
+}
+
 
 
 //////////////////////////////////////
