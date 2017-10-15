@@ -121,7 +121,7 @@ $('.thanks__button').click(function(){
   $('.login-page').fadeIn(700);
 
   $('.label__icon').removeClass('active valid invalid')
-  $('input').val('');
+  $('.login input').val('').focusout();
 
 })
 
