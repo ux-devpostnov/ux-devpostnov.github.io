@@ -40,7 +40,9 @@ function hidePreloader(){
     $('.tab').click(function(){
       var data = $(this).attr('data-tab');
 
+      $('.label').removeClass('valid invalid');
       $('.tab-container').fadeOut(0);
+      $('.tab-container input').focusout().val('');
       $('#'+data+'').fadeIn(200);
 
       $('.tab').removeClass('active');
