@@ -21,12 +21,11 @@
 </div>
 
 
-<div class="thanks">
-  <h2 class="thanks__text">Вы успешно вошли или зарегистрировались на сайте!<br>Спасибо за использование данной формы!<br>К сожалению пока работает только она ;)</h2>
-  <button class="thanks__button">Вернуться</button>
-</div>
-
-
+<!--
+====================================
+       Login or Register page
+====================================
+-->
 
 <section class="login-page">
 
@@ -59,7 +58,7 @@
             <input type="password" class="form__input">
           </label>
 
-          <button type="button" class="form__button">Enter</button>
+          <button type="button" class="form__button button">Enter</button>
          </form>
       </section>
 
@@ -79,7 +78,7 @@
             <input type="password" class="form__input">
           </label>
 
-          <button type="button" class="form__button">Register</button>
+          <button type="button" class="form__button button">Register</button>
          </form>
       </section>
 
@@ -87,9 +86,91 @@
 
   </div><!-- end.login -->
 
-
-
 </section><!-- end.login-page -->
+
+
+<!--
+====================================
+              Panels
+====================================
+-->
+
+<div class="flex-container">
+<aside class="sidebar">
+  <span data-tab="home"><img src="img/logo.png" alt="" class="sidebar__logo logo"></span>
+
+  <nav class="nav">
+    <ul class="nav-list">
+      <li class="nav__item">
+        <span data-tab="home" class="nav__link active">Home</span>
+      </li>
+      <li class="nav__item">
+        <span data-tab="workflow" class="nav__link">Workflow</span>
+      </li>
+      <li class="nav__item">
+        <span data-tab="statistic" class="nav__link">Statistic</span>
+      </li>
+      <li class="nav__item">
+        <span data-tab="calendar" class="nav__link">Calendar</span>
+      </li>
+      <li class="nav__item">
+        <span data-tab="users" class="nav__link">Users</span>
+      </li>
+      <li class="nav__item">
+        <span data-tab="settings" class="nav__link">Settings</span>
+      </li>
+    </ul>
+  </nav>
+</aside>
+
+<main class="content">
+
+  <!-- Panel -->
+  <div class="top-panel">
+    <div class="top-panel__left-side">
+      <i class="top-panel__icon top-panel__icon--menu"></i>
+      <i class="top-panel__icon top-panel__icon--search"></i>
+    </div><!-- end.left-side -->
+    <div class="top-panel__right-side">
+      <button class="top-panel__button button button--add-project">Add project</button>
+      <i class="top-panel__icon top-panel__icon--message"></i>
+      <i class="top-panel__icon top-panel__icon--notice"></i>
+      <section class="top-panel__user-block user-block">
+        <img src="" alt="" class="user-block__avatar">
+        <i class="top-panel__icon top-panel__icon--arrow"></i>
+        <menu class="user-block__menu user-menu">
+          <ul class="user-menu__list">
+             <li class="user-menu__utem"></li>
+             <li class="user-menu__utem"></li>
+             <li class="user-menu__utem"></li>
+             <li class="user-menu__utem"></li>
+             <li class="user-menu__utem"></li>
+           </ul>
+        </menu>
+      </section>
+    </div><!-- end.right-side -->
+  </div><!-- end.top-panel -->
+
+
+  <!-- Home screen -->
+
+
+
+
+
+
+</main>
+
+
+
+</div>
+
+<!--
+====================================
+              Home Screen
+====================================
+-->
+
 
 
 </body>

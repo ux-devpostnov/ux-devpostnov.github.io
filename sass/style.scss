@@ -4,6 +4,7 @@ $light-blue: #5584ff;
 *{
   box-sizing: border-box;
   margin: 0;
+  padding: 0;
 }
 
 html{
@@ -13,6 +14,20 @@ html{
 body{
   height: 100%;
   font-family: "Roboto",sans-serif;
+}
+
+
+.button{
+  color: #fff;
+  font-weight: 600;
+  border-radius: 30px;
+  border: none;
+  background-color: $light-blue;
+  transition: .3s all;
+  cursor: pointer;
+  outline: none;
+
+  &:hover{background-color: darken($light-blue,5%);}
 }
 
 /* animation preloader */
@@ -287,4 +302,180 @@ $loader-duration:2.0s ;
       font-size: 14px;
     }
   }
+}
+
+
+
+.loaders,
+.login-page{display: none;}
+
+
+
+
+
+.flex-container{
+  display: flex;
+  justify-content: space-between;
+}
+
+/*
+====================================
+              Panels
+====================================
+*/
+
+.sidebar{
+  flex-basis: 0;
+  width: 0;
+  visibility: hidden;
+  opacity: 0;
+  overflow: hidden;
+  background-color: $dark-blue;
+  position: relative;
+  transform: translateX(-100%);
+  transition: .7s all;
+  padding-top: 100px;
+  height: 100vh;
+
+  &.active{
+    visibility: visible;
+    opacity: 1;
+    flex-basis: 230px;
+    width: 230px;
+    transform: translateX(0);
+
+
+  }
+
+  &__logo{
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 160px;
+    height: auto;
+  }
+}
+
+.nav{
+  &__item{
+    position: relative;
+
+    &:after{
+      content:'';
+      display: inline-block;
+      position: absolute;
+      background-image: url('../img/nav-icon--sprite.png');
+      background-repeat: no-repeat;
+      background-size: 150px;
+      width: 25px;
+      height: 20px;
+      top: 50%;
+      left: 20px;
+      transform: translateY(-50%);
+    }
+
+    &:nth-child(1):after{background-position: -123px -2px;}
+    &:nth-child(2):after{background-position: -98px -2px;}
+    &:nth-child(3):after{background-position: -24px -2px;}
+    &:nth-child(4):after{background-position: -0px -2px;}
+    &:nth-child(5):after{background-position: -50px -2px;}
+    &:nth-child(6):after{background-position: -74px -2px;}
+  }
+  &__link{
+    color:#fff;
+    padding: 20px 5px 20px 50px;
+    transition: .5s all;
+    display: block;
+    cursor: pointer;
+    position: relative;
+    border-left: 6px solid transparent;
+
+    &:hover{background-color: #122143;}
+
+    &.active{
+      border-color: $light-blue;
+      background-color: #122143;
+    }
+  }
+}
+
+/*
+====================================
+              Content
+====================================
+*/
+
+.top-panel{
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 15px 10px;
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__left-side,
+  &__right-side{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  &__left-side{flex-basis:100px;}
+  &__right-side{flex-basis:400px;}
+
+  &__icon{
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background-image: url('../img/top-panel--sprite.png');
+    background-repeat: no-repeat;
+    background-size: 200px;
+
+    &--menu{background-position: -129px -2px;}
+    &--search{background-position: -159px -2px;}
+  }
+
+  .button--add-project{
+    position: relative;
+    padding: 10px 25px 10px 40px;
+    background-color: $light-blue;
+
+    &:hover{background-color: darken($light-blue,5%);}
+
+
+    &:before{
+      content: '';
+      display: block;
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      top: 50%;
+      left: 14px;
+      transform: translateY(-50%);
+      background: url('../img/top-panel--sprite.png') -180px -5px no-repeat;
+      background-size: 200px;
+    }
+  }
+
+
+}
+
+
+.user-menu{
+  display: none;
+}
+
+.content{
+  display: block;
+  flex-basis: 100%;
+  position: relative;
+  transition: .15s all;
+
+  &.move{margin-left: 0;}
 }

@@ -88,43 +88,32 @@ function hidePreloader(){
     var inputLogin = $(this).parent().find('input[type="text"]');
     var inputPass = $(this).parent().find('input[type="password"]');
 
-    //Valid username
-    if (inputLogin.val().length == 0){
-      $('.label__icon--name').removeClass('valid');
-      $('.label__icon--name').addClass('invalid');
-    }else {
-      $('.label__icon--name').removeClass('invalid');
-      $('.label__icon--name').addClass('valid');
-    }
-
-    //Valid pass
-    if (inputPass.val().length == 0){
-      $('.label__icon--pass').removeClass('valid');
-      $('.label__icon--pass').addClass('invalid');
-    }else {
-      $('.label__icon--pass').removeClass('invalid');
-      $('.label__icon--pass').addClass('valid');
-    }
-
-
-    //Valid login and pass
-    if (inputPass.val().length != 0 && inputLogin.val().length != 0) {
+    //Valid form
+    if (inputPass.val() == 'admin' && inputLogin.val() == 'admin') {
+      $('.label__icon--name,.label__icon--pass').addClass('valid');
       $('.login-page').fadeOut(700);
-      $('.thanks').fadeIn(700);
+    }else{
+      $('.label__icon--name,.label__icon--pass').addClass('invalid');
     }
 
   })
 
-//thanks return
-$('.thanks__button').click(function(){
-  $('.thanks').fadeOut(700);
-  $('.login-page').fadeIn(700);
 
-  $('.label__icon').removeClass('active valid invalid')
-  $('.login input').val('').focusout();
+  //nav switch .active
 
-})
+  $('.nav__link').click(function() {
+    $('.nav__link').removeClass('active');
+    $(this).addClass('active');
 
+    //switch tab-content
+  });
+
+
+  //menu
+  $('.top-panel__icon--menu').click(function() {
+    $('.sidebar').toggleClass('active')
+    $('.content').toggleClass('move');
+  });
 
 
 
