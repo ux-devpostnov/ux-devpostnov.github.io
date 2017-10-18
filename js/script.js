@@ -111,11 +111,39 @@ function hidePreloader(){
 
   //menu
   $('.top-panel__icon--menu').click(function() {
+    $(this).toggleClass('active');
+
     $('.sidebar').toggleClass('active')
     $('.content').toggleClass('move');
   });
 
 
+  //hide context menu
+  $(document).click(function(e) {
+    if (!e.target.closest('.user-block')){
+      $('.user-menu').removeClass('active')
+    }else if (e.target == $('.top-panel__icon--arrow')[0]){
+      $('.user-menu').toggleClass('active')
+    }else{
+      $('.user-menu').addClass('active')
+    }
+    e.stopPropagation();
+
+
+
+
+
+  });
+
+
+
+
+
+//debug
+
+$(document).click(function(e) {
+console.log(e.target)
+});
 
 
 
