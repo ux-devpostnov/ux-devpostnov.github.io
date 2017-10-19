@@ -122,7 +122,7 @@ function hidePreloader(){
   $(document).click(function(e) {
     if (!e.target.closest('.user-block')){
       $('.user-menu').removeClass('active')
-    }else if (e.target == $('.top-panel__icon--arrow')[0]){
+    }else if (e.target == $('.user-block')[0] || e.target == $('.user-block__avatar')[0] || e.target == $('.top-panel__icon--arrow')[0]){
       $('.user-menu').toggleClass('active')
     }else{
       $('.user-menu').addClass('active')

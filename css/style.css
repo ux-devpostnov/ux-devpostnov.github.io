@@ -607,7 +607,7 @@ body {
   cursor: pointer;
 }
 .user-menu__item:hover {
-  background-color: #f6f6f6;
+  background-color: #efefef;
 }
 
 .content {
